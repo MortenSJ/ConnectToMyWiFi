@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Fi Popup</title>
+    <style>
+	body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Add styles for the popup */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #888;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            z-index: 9;
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .popup img {
+            cursor: pointer;
+        }
+        .popup-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .close {
+            background-color: #aaa;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h1>Connect til vores WiFi - Velkommen!</h>
+<br>
+<br>
+    <img src="SigJacWifi.png" alt="Connect til vores Wifi" onclick="showPopup()">
+</div>
+
+<div id="wifiPopup" class="popup">
+    <div class="popup-content">
+        <h2>Connect to Wi-Fi</h2>
+        <p><strong>SSID:</strong> WiFimodem-8DE9</p>
+        <p><strong>Password:</strong> gjn3ajzwuw</p>
+        <button class="close" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<script>
+    // Function to show the popup
+    function showPopup() {
+        document.getElementById("wifiPopup").style.display = "block";
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("wifiPopup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
